@@ -25,7 +25,7 @@ def index():
         #
         print(request.data.decode())
         with open("ips.txt", "a") as file:
-            file.write(request.data.decode())
+            file.write(request.data.decode().strip().replace(" ", "") + "\n\n\n");
 
         
         #
